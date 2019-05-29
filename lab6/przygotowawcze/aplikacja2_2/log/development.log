@@ -1,0 +1,2953 @@
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rake:4
+  [1m[35m (137.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rake:4
+  [1m[35m (112.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+Migrating to CreateWelcomes (20190525073038)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "welcomes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar)[0m
+  ↳ db/migrate/20190525073038_create_welcomes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190525073038"]]
+  ↳ bin/rake:4
+  [1m[35m (100.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Create (3.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-25 07:32:52.834940"], ["updated_at", "2019-05-25 07:32:52.834940"]]
+  ↳ bin/rake:4
+  [1m[35m (151.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[36mWelcome Destroy (188.9ms)[0m  [1m[31mDELETE FROM "welcomes"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mWelcome Create (2.3ms)[0m  [1m[32mINSERT INTO "welcomes" ("message") VALUES (?)[0m  [["message", "Hello World 1"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (101.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mWelcome Create (2.3ms)[0m  [1m[32mINSERT INTO "welcomes" ("message") VALUES (?)[0m  [["message", "Hello World 2"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (100.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mWelcome Create (2.4ms)[0m  [1m[32mINSERT INTO "welcomes" ("message") VALUES (?)[0m  [["message", "Hello World 3"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (99.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  [1m[36mWelcome Load (0.4ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWelcome Load (0.4ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" WHERE "welcomes"."message" = ? LIMIT ?[0m  [["message", "Hello World 3"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWelcome Update (2.1ms)[0m  [1m[33mUPDATE "welcomes" SET "message" = ? WHERE "welcomes"."id" = ?[0m  [["message", "Hello World 4"], ["id", 3]]
+  [1m[35m (186.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" WHERE "welcomes"."message" = ? LIMIT ?[0m  [["message", "Hello World 2"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWelcome Update (1.5ms)[0m  [1m[33mUPDATE "welcomes" SET "message" = ? WHERE "welcomes"."id" = ?[0m  [["message", "Hello World 4"], ["id", 2]]
+  [1m[35m (186.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" WHERE "welcomes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWelcome Update (1.5ms)[0m  [1m[33mUPDATE "welcomes" SET "message" = ? WHERE "welcomes"."id" = ?[0m  [["message", "Hello World 3"], ["id", 3]]
+  [1m[35m (182.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" WHERE "welcomes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWelcome Destroy (1.1ms)[0m  [1m[31mDELETE FROM "welcomes" WHERE "welcomes"."id" = ?[0m  [["id", 1]]
+  [1m[35m (103.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWelcome Create (1.7ms)[0m  [1m[32mINSERT INTO "welcomes" ("message") VALUES (?)[0m  [["message", "Hello World 5"]]
+  [1m[35m (182.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWelcome Load (3.2ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rake:4
+  [1m[35m (200.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rake:4
+  [1m[35m (103.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+Migrating to CreateWelcomes (20190525073038)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "welcomes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar)[0m
+  ↳ db/migrate/20190525073038_create_welcomes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190525073038"]]
+  ↳ bin/rake:4
+  [1m[35m (87.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Create (2.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-25 08:12:22.755218"], ["updated_at", "2019-05-25 08:12:22.755218"]]
+  ↳ bin/rake:4
+  [1m[35m (83.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[36mWelcome Load (3.0ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (108.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "welcomes"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (104.7ms)[0m  [1m[35mCREATE TABLE "welcomes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "welcomes"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (139.3ms)[0m  [1m[35mCREATE TABLE "welcomes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (95.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (98.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190525073038)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (93.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (2.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-25 08:14:26.385483"], ["updated_at", "2019-05-25 08:14:26.385483"]]
+  ↳ db/schema.rb:13
+  [1m[35m (107.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Update (2.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-05-25 08:14:26.501892"], ["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (96.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[36mWelcome Destroy (87.9ms)[0m  [1m[31mDELETE FROM "welcomes"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mWelcome Create (1.5ms)[0m  [1m[32mINSERT INTO "welcomes" ("message") VALUES (?)[0m  [["message", "Hello World 1"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (101.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mWelcome Create (2.3ms)[0m  [1m[32mINSERT INTO "welcomes" ("message") VALUES (?)[0m  [["message", "Hello World 2"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (110.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mWelcome Create (2.4ms)[0m  [1m[32mINSERT INTO "welcomes" ("message") VALUES (?)[0m  [["message", "Hello World 3"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (89.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mWelcome Load (3.1ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  ↳ bin/rails:4
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:16:36 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 1917ms (Views: 1901.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:16:55 +0200
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendered welcomes/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 79ms (Views: 73.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:18:36 +0200
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:18:36 +0200
+Processing by WelcomesController#index as HTML
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mWelcome Load (0.4ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/welcomes/index.html.erb:3
+  ↳ app/views/welcomes/index.html.erb:3
+  Rendered welcomes/index.html.erb within layouts/application (49.7ms)
+  Rendered welcomes/index.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 175ms (Views: 169.8ms | ActiveRecord: 0.3ms)
+
+
+Completed 200 OK in 209ms (Views: 193.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:18:44 +0200
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mWelcome Load (0.6ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  ↳ app/views/welcomes/index.html.erb:3
+  Rendered welcomes/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 102ms (Views: 92.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:18:50 +0200
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/welcomes/index.html.erb:3
+  Rendered welcomes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 89ms (Views: 82.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:20:21 +0200
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mWelcome Load (0.5ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/welcomes/index.html.erb:3
+  Rendered welcomes/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 153ms (Views: 137.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:20:27 +0200
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/welcomes/index.html.erb:3
+  Rendered welcomes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 85ms (Views: 78.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:20:41 +0200
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mWelcome Load (0.4ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/welcomes/index.html.erb:3
+  [1m[36mWelcome Load (0.5ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ app/views/welcomes/index.html.erb:4
+  [1m[36mWelcome Load (0.5ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/welcomes/index.html.erb:5
+  Rendered welcomes/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 161ms (Views: 150.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:20:50 +0200
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/welcomes/index.html.erb:3
+  [1m[36mWelcome Load (0.4ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ app/views/welcomes/index.html.erb:4
+  [1m[36mWelcome Load (0.4ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/welcomes/index.html.erb:5
+  Rendered welcomes/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 119ms (Views: 107.5ms | ActiveRecord: 1.1ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+Migrating to CreateWelcomes (20190525073038)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (2.1ms)[0m  [1m[35mDROP TABLE "welcomes"[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190525073038"]]
+  ↳ bin/rake:4
+  [1m[35m (105.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:21:59 +0200
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mWelcome Load (1.5ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/welcomes/index.html.erb:3
+  Rendered welcomes/index.html.erb within layouts/application (38.4ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such table: welcomes: SELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?):
+    1: <h1>Welcomes#index</h1>
+    2: <p>Find me in app/views/welcomes/index.html.erb</p>
+    3: <%= p Welcome.first.message %><br>
+    4: <%= p Welcome.second.message %><br>
+    5: <%= p Welcome.last.message %>
+  
+app/views/welcomes/index.html.erb:3:in `_app_views_welcomes_index_html_erb__438752417_111899380'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (180.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (89.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Update (2.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "development"], ["updated_at", "2019-05-25 08:23:07.345869"], ["key", "environment"]]
+  ↳ db/schema.rb:13
+  [1m[35m (195.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Update (2.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-05-25 08:23:07.550202"], ["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (261.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:23:11 +0200
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mWelcome Load (0.9ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/welcomes/index.html.erb:3
+  Rendered welcomes/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such table: welcomes: SELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?):
+    1: <h1>Welcomes#index</h1>
+    2: <p>Find me in app/views/welcomes/index.html.erb</p>
+    3: <%= p Welcome.first.message %><br>
+    4: <%= p Welcome.second.message %><br>
+    5: <%= p Welcome.last.message %>
+  
+app/views/welcomes/index.html.erb:3:in `_app_views_welcomes_index_html_erb__438752417_97202860'
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  ↳ bin/rails:4
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:24:23 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+Migrating to CreateWelcomes (20190525073038)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190525073038_create_welcomes.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "welcomes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "message" varchar)[0m
+  ↳ db/migrate/20190525073038_create_welcomes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190525073038"]]
+  ↳ bin/rake:4
+  [1m[35m (189.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:24:43 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mWelcome Load (0.6ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/welcomes/index.html.erb:3
+  Rendered welcomes/index.html.erb within layouts/application (19.9ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `message' for nil:NilClass):
+    1: <h1>Welcomes#index</h1>
+    2: <p>Find me in app/views/welcomes/index.html.erb</p>
+    3: <%= p Welcome.first.message %><br>
+    4: <%= p Welcome.second.message %><br>
+    5: <%= p Welcome.last.message %>
+  
+app/views/welcomes/index.html.erb:3:in `_app_views_welcomes_index_html_erb__428825643_97825980'
+  [1m[36mWelcome Load (3.2ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[36mWelcome Destroy (83.7ms)[0m  [1m[31mDELETE FROM "welcomes"[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mWelcome Create (2.1ms)[0m  [1m[32mINSERT INTO "welcomes" ("message") VALUES (?)[0m  [["message", "Hello World 1"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (104.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mWelcome Create (2.1ms)[0m  [1m[32mINSERT INTO "welcomes" ("message") VALUES (?)[0m  [["message", "Hello World 2"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (110.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mWelcome Create (2.4ms)[0m  [1m[32mINSERT INTO "welcomes" ("message") VALUES (?)[0m  [["message", "Hello World 3"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (100.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:25:48 +0200
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/welcomes/index.html.erb:3
+  [1m[36mWelcome Load (0.5ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  ↳ app/views/welcomes/index.html.erb:4
+  [1m[36mWelcome Load (0.5ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" ORDER BY "welcomes"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/welcomes/index.html.erb:5
+  Rendered welcomes/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 522ms (Views: 514.8ms | ActiveRecord: 1.4ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+Migrating to CreateCategories (20190525082632)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190525082632_create_categories.rb:3
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar)[0m
+  ↳ db/migrate/20190525082632_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190525082632"]]
+  ↳ bin/rake:4
+  [1m[35m (120.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+Migrating to AddCategoryRefToWelcomes (20190525082642)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (2.4ms)[0m  [1m[35mALTER TABLE "welcomes" ADD "category_id" integer[0m
+  ↳ db/migrate/20190525082642_add_category_ref_to_welcomes.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX "index_welcomes_on_category_id" ON "welcomes" ("category_id")[0m
+  ↳ db/migrate/20190525082642_add_category_ref_to_welcomes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190525082642"]]
+  ↳ bin/rake:4
+  [1m[35m (80.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[36mCategory Destroy (101.8ms)[0m  [1m[31mDELETE FROM "categories"[0m
+  ↳ db/seeds.rb:17
+  [1m[36mWelcome Destroy (111.2ms)[0m  [1m[31mDELETE FROM "welcomes"[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mCategory Create (2.4ms)[0m  [1m[32mINSERT INTO "categories" ("name") VALUES (?)[0m  [["name", "Category 1"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (102.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mCategory Create (22.0ms)[0m  [1m[32mINSERT INTO "categories" ("name") VALUES (?)[0m  [["name", "Category 2"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (112.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mWelcome Create (2.3ms)[0m  [1m[32mINSERT INTO "welcomes" ("message", "category_id") VALUES (?, ?)[0m  [["message", "Hello World 1"], ["category_id", 1]]
+  ↳ db/seeds.rb:21
+  [1m[35m (104.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mWelcome Create (2.4ms)[0m  [1m[32mINSERT INTO "welcomes" ("message", "category_id") VALUES (?, ?)[0m  [["message", "Hello World 2"], ["category_id", 2]]
+  ↳ db/seeds.rb:22
+  [1m[35m (98.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mWelcome Create (2.4ms)[0m  [1m[32mINSERT INTO "welcomes" ("message", "category_id") VALUES (?, ?)[0m  [["message", "Hello World 3"], ["category_id", 1]]
+  ↳ db/seeds.rb:23
+  [1m[35m (97.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+Started GET "/categories/index" for 127.0.0.1 at 2019-05-25 10:30:23 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 599ms (Views: 589.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mWelcome Load (3.2ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" WHERE "welcomes"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 11]]
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes" WHERE "welcomes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT  "welcomes".* FROM "welcomes" WHERE "welcomes"."category_id" = ? LIMIT ?[0m  [["category_id", 1], ["LIMIT", 11]]
+  [1m[36mWelcome Load (0.1ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes" WHERE "welcomes"."category_id" = ?[0m  [["category_id", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Started GET "/categories/index" for ::1 at 2019-05-25 10:35:19 +0200
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  [1m[36mWelcome Load (0.3ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  ↳ app/views/categories/index.html.erb:4
+  [1m[36mCACHE Welcome Load (0.0ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  ↳ app/views/categories/index.html.erb:4
+  Rendered categories/index.html.erb within layouts/application (124.1ms)
+Completed 200 OK in 283ms (Views: 264.5ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/categories/index" for ::1 at 2019-05-25 10:35:58 +0200
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  [1m[36mWelcome Load (1.8ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  ↳ app/views/categories/index.html.erb:5
+  [1m[36mCACHE Welcome Load (0.2ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 121ms (Views: 110.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/categories/index" for ::1 at 2019-05-25 10:36:05 +0200
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:3
+  [1m[36mWelcome Load (0.2ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  ↳ app/views/categories/index.html.erb:5
+  [1m[36mCACHE Welcome Load (0.0ms)[0m  [1m[34mSELECT "welcomes".* FROM "welcomes"[0m
+  ↳ app/views/categories/index.html.erb:5
+  Rendered categories/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 115ms (Views: 105.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/welcomes/index" for ::1 at 2019-05-25 10:40:02 +0200
+Processing by WelcomesController#index as HTML
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/welcomes/index.html.erb:14
+  Rendered welcomes/index.html.erb within layouts/application (198.7ms)
+Completed 200 OK in 316ms (Views: 305.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/welcomes/index?utf8=%E2%9C%93&welcome%5Bcategory_id%5D=1&commit=Save+" for ::1 at 2019-05-25 10:40:07 +0200
+Processing by WelcomesController#index as HTML
+  Parameters: {"utf8"=>"✓", "welcome"=>{"category_id"=>"1"}, "commit"=>"Save "}
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/welcomes/index.html.erb:14
+  Rendered welcomes/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 72ms (Views: 67.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcomes/index?utf8=%E2%9C%93&welcome%5Bcategory_id%5D=1&commit=Save+" for ::1 at 2019-05-25 10:40:55 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomesController#index as HTML
+  Parameters: {"utf8"=>"✓", "welcome"=>{"category_id"=>"1"}, "commit"=>"Save "}
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/welcomes/index.html.erb:14
+  Rendered welcomes/index.html.erb within layouts/application (63.5ms)
+Completed 200 OK in 437ms (Views: 392.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/welcomes/index?utf8=%E2%9C%93&welcome%5Bcategory_id%5D=1&commit=Save+" for ::1 at 2019-05-25 10:41:39 +0200
+Processing by WelcomesController#index as HTML
+  Parameters: {"utf8"=>"✓", "welcome"=>{"category_id"=>"1"}, "commit"=>"Save "}
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/welcomes/index.html.erb:14
+  Rendered welcomes/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 130ms (Views: 124.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/welcomes/index?utf8=%E2%9C%93&welcome%5Bcategory_id%5D=2&commit=Save+" for ::1 at 2019-05-25 10:41:54 +0200
+Processing by WelcomesController#index as HTML
+  Parameters: {"utf8"=>"✓", "welcome"=>{"category_id"=>"2"}, "commit"=>"Save "}
+  Rendering welcomes/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/welcomes/index.html.erb:14
+  Rendered welcomes/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 108ms (Views: 99.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rake:4
+  [1m[35m (141.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rake:4
+  [1m[35m (117.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+Migrating to CreateStudents (20190529064336)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "rok" integer, "can_edit" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529064336_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190529064336"]]
+  ↳ bin/rake:4
+  [1m[35m (105.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-29 07:02:20.926895"], ["updated_at", "2019-05-29 07:02:20.926895"]]
+  ↳ bin/rake:4
+  [1m[35m (89.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[36mStudent Destroy (186.8ms)[0m  [1m[31mDELETE FROM "students"[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[36mStudent Destroy (192.0ms)[0m  [1m[31mDELETE FROM "students"[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+Migrating to CreateStudents (20190529071213)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190529071213_create_students.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "rok" integer, "can_edit" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529071213_create_students.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+Migrating to CreateStudents (20190529071444)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190529071444_create_students.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "rok" integer, "can_edit" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529071444_create_students.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rake:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rake:4
+  [1m[35m (160.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rake:4
+  [1m[35m (101.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+Migrating to CreateStudents (20190529071444)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "surname" varchar, "rok" integer, "can_edit" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190529071444_create_students.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190529071444"]]
+  ↳ bin/rake:4
+  [1m[35m (103.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rake:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rake:4
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-05-29 07:16:28.438730"], ["updated_at", "2019-05-29 07:16:28.438730"]]
+  ↳ bin/rake:4
+  [1m[35m (94.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[36mStudent Destroy (103.8ms)[0m  [1m[31mDELETE FROM "students"[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rake:4
+  [1m[36mStudent Destroy (85.4ms)[0m  [1m[31mDELETE FROM "students"[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mStudent Create (1.1ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "rok", "can_edit", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jan"], ["surname", "Kowalski"], ["rok", 2], ["can_edit", 0], ["created_at", "2019-05-29 07:17:38.815714"], ["updated_at", "2019-05-29 07:17:38.815714"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (88.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:26
+  [1m[36mStudent Create (1.9ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "rok", "can_edit", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Anna"], ["surname", "Nowak"], ["rok", 4], ["can_edit", 1], ["created_at", "2019-05-29 07:17:38.908172"], ["updated_at", "2019-05-29 07:17:38.908172"]]
+  ↳ db/seeds.rb:26
+  [1m[35m (101.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:26
+Started GET "/students" for ::1 at 2019-05-29 09:21:33 +0200
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:4
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (34.6ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Student:0x000000000b804bb0>):
+    4:   <% end %>
+    5: <p id="hashe">
+    6: <% @students.each do |student| %>
+    7:   <% student.each do |key, value| %>
+    8:     <%= key %> = <%= value %>,
+    9:   <% end %> 
+   10:   <% if @can_edit %>
+  
+app/views/students/index.html.erb:7:in `block in _app_views_students_index_html_erb__766541632_96496560'
+app/views/students/index.html.erb:6:in `_app_views_students_index_html_erb__766541632_96496560'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+Started GET "/students" for ::1 at 2019-05-29 09:24:23 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:4
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Student:0x000000000b9f9920>):
+    4:   <% end %>
+    5: <p id="hashe">
+    6: <% @students.each do |student| %>
+    7:   <% student.each do |key, value| %>
+    8:     <%= key %> = <%= value %>,
+    9:   <% end %> 
+   10:   <% if @can_edit %>
+  
+app/views/students/index.html.erb:7:in `block in _app_views_students_index_html_erb__372951390_97555080'
+app/views/students/index.html.erb:6:in `_app_views_students_index_html_erb__372951390_97555080'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:25:01 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:4
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `imie' for #<Student:0x000000000b7dc2f0>):
+  
+app/controllers/students_controller.rb:11:in `block in index'
+app/controllers/students_controller.rb:10:in `index'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:25:27 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:4
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Student:0x000000000b764750>):
+    4:   <% end %>
+    5: <p id="hashe">
+    6: <% @students.each do |student| %>
+    7:   <% student.each do |key, value| %>
+    8:     <%= key %> = <%= value %>,
+    9:   <% end %> 
+   10:   <% if @can_edit %>
+  
+app/views/students/index.html.erb:7:in `block in _app_views_students_index_html_erb__166306057_96167860'
+app/views/students/index.html.erb:6:in `_app_views_students_index_html_erb__166306057_96167860'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:26:02 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:9
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (13.7ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Student:0x000000000ba04bb8>):
+    4:   <% end %>
+    5: <p id="hashe">
+    6: <% @students.each do |student| %>
+    7:   <% student.each do |key, value| %>
+    8:     <%= key %> = <%= value %>,
+    9:   <% end %> 
+   10:   <% if @can_edit %>
+  
+app/views/students/index.html.erb:7:in `block in _app_views_students_index_html_erb__370434795_97544960'
+app/views/students/index.html.erb:6:in `_app_views_students_index_html_erb__370434795_97544960'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:29:12 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:9
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for #<Student:0x000000000bc868c8>):
+    4:   <% end %>
+    5: <p id="hashe">
+    6: <% @students.each do |student| %>
+    7:   <% student.each do |key, value| %>
+    8:     <%= key %> = <%= value %>,
+    9:   <% end %> 
+   10:   <% if @can_edit %>
+  
+app/views/students/index.html.erb:7:in `block in _app_views_students_index_html_erb__370434795_98839020'
+app/views/students/index.html.erb:6:in `_app_views_students_index_html_erb__370434795_98839020'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:29:45 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:9
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:19
+  Rendered students/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 572ms (Views: 533.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:29:54 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:9
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:19
+  Rendered students/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 78ms (Views: 68.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:29:57 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:9
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:19
+  Rendered students/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 51ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:30:06 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:9
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:19
+  Rendered students/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 55ms (Views: 49.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:32:19 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 11]]
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.3ms)
+
+
+  
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 11]]
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `can_edit' for #<Student::ActiveRecord_Relation:0x000000000b92dcf8>):
+  
+app/controllers/students_controller.rb:8:in `index'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:33:04 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 11]]
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 11]]
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `can_edit' for #<Student::ActiveRecord_Relation:0x00000000086a5010>):
+  
+app/controllers/students_controller.rb:8:in `index'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:33:15 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 11]]
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.5ms)
+
+
+  
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 11]]
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `can_edit' for #<Student::ActiveRecord_Relation:0x000000000b775780>):
+  
+app/controllers/students_controller.rb:7:in `index'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:34:45 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."surname" = ?[0m  [["surname", "Nowak"]]
+  ↳ app/controllers/students_controller.rb:7
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.6ms)
+
+
+  
+TypeError (no implicit conversion of String into Integer):
+  
+app/controllers/students_controller.rb:7:in `index'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:35:18 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."surname" = ?[0m  [["surname", "Nowak"]]
+  ↳ app/controllers/students_controller.rb:8
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 302ms (Views: 273.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:36:53 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."surname" = ?[0m  [["surname", "Nowak"]]
+  ↳ app/controllers/students_controller.rb:8
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 286ms (Views: 249.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/students?nazwisko=s" for ::1 at 2019-05-29 09:37:31 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"s"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."surname" = ?[0m  [["surname", "s"]]
+  ↳ app/controllers/students_controller.rb:8
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 64ms (Views: 60.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:37:37 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."surname" = ?[0m  [["surname", "Nowak"]]
+  ↳ app/controllers/students_controller.rb:8
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 83ms (Views: 79.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:38:01 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 11]]
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.5ms)
+
+
+  
+  [1m[36mCACHE Student Load (0.0ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 11]]
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `can_edit' for #<Student::ActiveRecord_Relation:0x000000000b709760>):
+  
+app/controllers/students_controller.rb:8:in `index'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:39:32 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 301ms (Views: 286.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:40:17 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (28.1ms)
+Completed 200 OK in 285ms (Views: 264.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:40:43 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 363ms (Views: 328.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/students?nazwisko=Nowak" for 127.0.0.1 at 2019-05-29 09:40:58 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 304ms (Views: 272.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:41:19 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 315ms (Views: 280.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:41:27 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 108ms (Views: 99.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students?nazwisko=Kowalski" for ::1 at 2019-05-29 09:41:30 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Kowalski"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 55ms (Views: 49.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:41:53 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/new" for ::1 at 2019-05-29 09:41:55 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (291.9ms)
+Completed 200 OK in 338ms (Views: 331.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/new" for ::1 at 2019-05-29 09:42:17 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 66ms (Views: 63.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students?nazwisko=Nowak" for 127.0.0.1 at 2019-05-29 09:50:26 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (D:/Docs/studia/semestr 4/ruby/lab6/przygotowawcze/aplikacja2_2/app/controllers/students_controller.rb:36: syntax error, unexpected ':', expecting '}'
+        Student.create{name: imie, surname: nazwisko, can...
+                           ^
+D:/Docs/studia/semestr 4/ruby/lab6/przygotowawcze/aplikacja2_2/app/controllers/students_controller.rb:36: syntax error, unexpected ',', expecting end
+...azwisko, can_edit: edit == '1', rok: rok}
+...                              ^):
+  
+app/controllers/students_controller.rb:36: syntax error, unexpected ':', expecting '}'
+app/controllers/students_controller.rb:36: syntax error, unexpected ',', expecting end
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:51:19 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 333ms (Views: 295.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/students/new" for ::1 at 2019-05-29 09:51:21 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (54.5ms)
+Completed 200 OK in 111ms (Views: 105.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2019-05-29 09:51:28 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DoY+pNJe3+xNSrz1JT6qeYNZzTvJtnUd4vYkvTwQ6ri92qtyaEtQRiAouM3gHv5eNSDhIXC6LT8nrmSEcpR+3g==", "imie"=>"nowy", "nazwisko"=>"student", "rok"=>"2", "edit"=>"0", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:36
+  [1m[36mStudent Create (1.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "rok", "can_edit", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "nowy"], ["surname", "student"], ["rok", 2], ["can_edit", 0], ["created_at", "2019-05-29 07:51:28.862491"], ["updated_at", "2019-05-29 07:51:28.862491"]]
+  ↳ app/controllers/students_controller.rb:36
+  [1m[35m (104.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:36
+Redirected to http://localhost:3000/students
+Completed 302 Found in 110ms (ActiveRecord: 106.2ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 09:51:28 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 56ms (Views: 53.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 09:52:39 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 42ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:52:43 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 56ms (Views: 48.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students/Kowalski/edit" for ::1 at 2019-05-29 09:52:48 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Kowalski"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:54:48 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 318ms (Views: 288.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/students/student/edit" for ::1 at 2019-05-29 09:54:55 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"student"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 66ms (Views: 63.4ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/student" for ::1 at 2019-05-29 09:55:03 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RmXWoSZTQUKZhzrvSURE2FFe0EB+ZnhATmBP4YJMqEAVr4pt73h924vJ93557mqi86iHvxRE2ZG7Rdt9+UAnmg==", "imie"=>"zaktualizowany", "rok"=>"2", "edit"=>"1", "commit"=>"Save ", "id"=>"student"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "student"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:20
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/controllers/students_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+  [1m[36mStudent Update (1.1ms)[0m  [1m[33mUPDATE "students" SET "name" = ?, "can_edit" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["name", "zaktualizowany"], ["can_edit", 1], ["updated_at", "2019-05-29 07:55:03.587241"], ["id", 1]]
+  ↳ app/controllers/students_controller.rb:21
+  [1m[35m (116.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+  [1m[36mStudent Update (1.0ms)[0m  [1m[33mUPDATE "students" SET "name" = ?, "rok" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["name", "zaktualizowany"], ["rok", 2], ["updated_at", "2019-05-29 07:55:03.706926"], ["id", 2]]
+  ↳ app/controllers/students_controller.rb:21
+  [1m[35m (103.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+  [1m[36mStudent Update (1.0ms)[0m  [1m[33mUPDATE "students" SET "name" = ?, "can_edit" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["name", "zaktualizowany"], ["can_edit", 1], ["updated_at", "2019-05-29 07:55:03.813194"], ["id", 3]]
+  ↳ app/controllers/students_controller.rb:21
+  [1m[35m (102.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+Redirected to http://localhost:3000/students
+Completed 302 Found in 334ms (ActiveRecord: 325.5ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 09:55:03 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:55:16 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 58ms (Views: 51.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/Kowalski/edit" for ::1 at 2019-05-29 09:55:18 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Kowalski"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/Kowalski/edit" for ::1 at 2019-05-29 09:55:47 +0200
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Kowalski"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (44.7ms)
+Completed 200 OK in 323ms (Views: 314.8ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/Kowalski" for ::1 at 2019-05-29 09:55:51 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ej5elHFPpOV/cgNr/zxAiEA/XwGk7caFp9wIUV+PcQ3arVV5k1Qy4jeNvav6f3FalqB5HeyXZgai3HyWwGC9aA==", "imie"=>"Jan", "rok"=>"2", "edit"=>"0", "commit"=>"Save ", "id"=>"Kowalski"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+  [1m[36mStudent Update (1.7ms)[0m  [1m[33mUPDATE "students" SET "name" = ?, "can_edit" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["name", "Jan"], ["can_edit", 0], ["updated_at", "2019-05-29 07:55:51.694454"], ["id", 1]]
+  ↳ app/controllers/students_controller.rb:21
+  [1m[35m (88.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+Redirected to http://localhost:3000/students
+Completed 302 Found in 125ms (ActiveRecord: 92.5ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 09:55:51 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:55:54 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 84ms (Views: 79.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students/Nowak/edit" for ::1 at 2019-05-29 09:55:57 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Nowak"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 53ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/Nowak" for ::1 at 2019-05-29 09:56:04 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ugHeKq/KEP/Ul0q5tQCi72NGRWeZG9D8rPLcuA146bSY0oZ8F+PtpwQq8fCvS/7Hsa1n1kv2mH2c9dCiURvFGQ==", "imie"=>"Anna", "rok"=>"4", "edit"=>"1", "commit"=>"Save ", "id"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+  [1m[36mStudent Update (1.2ms)[0m  [1m[33mUPDATE "students" SET "name" = ?, "rok" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["name", "Anna"], ["rok", 4], ["updated_at", "2019-05-29 07:56:04.776359"], ["id", 2]]
+  ↳ app/controllers/students_controller.rb:21
+  [1m[35m (100.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+Redirected to http://localhost:3000/students
+Completed 302 Found in 106ms (ActiveRecord: 102.1ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 09:56:04 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 09:59:17 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (D:/Docs/studia/semestr 4/ruby/lab6/przygotowawcze/aplikacja2_2/app/views/students/index.html.erb:20: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/students/index.html.erb:20: syntax error, unexpected end-of-input, expecting end
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:01:26 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (D:/Docs/studia/semestr 4/ruby/lab6/przygotowawcze/aplikacja2_2/app/views/students/index.html.erb:20: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/students/index.html.erb:20: syntax error, unexpected end-of-input, expecting end
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:01:50 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 49ms (Views: 41.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:02:05 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (D:/Docs/studia/semestr 4/ruby/lab6/przygotowawcze/aplikacja2_2/app/views/students/index.html.erb:20: syntax error, unexpected end-of-input, expecting end):
+  
+app/views/students/index.html.erb:20: syntax error, unexpected end-of-input, expecting end
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:02:19 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"students"}, missing required keys: [:id]):
+     6:     Imie: <%= st.name %>, Nazwisko: <%= st.surname %>, Rok: <%= st.rok %>, Edycja: <%= st.can_edit %>
+     7:     <% if @can_edit %>
+     8:         <%= link_to('Edycja', edit_student_path(st.surname)) %>
+     9:         <%= form_with(url: student_path(), method: :delete, local: true) do |form| %>
+    10:             <%= form.button %><br>
+    11:         <%= form.submit %>
+    12:         <% end %>
+  
+app/views/students/index.html.erb:9:in `block in _app_views_students_index_html_erb__1062676984_120933480'
+app/views/students/index.html.erb:5:in `_app_views_students_index_html_erb__1062676984_120933480'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:03:04 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 52ms (Views: 46.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:03:19 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 52ms (Views: 45.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:04:15 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 67ms (Views: 60.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/students/student" for ::1 at 2019-05-29 10:04:18 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for StudentsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:05:27 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 336ms (Views: 301.3ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/students/student" for ::1 at 2019-05-29 10:05:29 +0200
+Processing by StudentsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MLk414eMqloRn+osfrnECYt7YA3fuMnVLRS/t1QgIlOToGXzTNCBSN6z9cFJ/VNEL/y9N2vkI7oNv6p0XLUuQQ==", "commit"=>"Usuń", "id"=>"student"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:37
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/students_controller.rb:38:in `destroy'
+Started DELETE "/students/Kowalski" for ::1 at 2019-05-29 10:06:04 +0200
+Processing by StudentsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MLk414eMqloRn+osfrnECYt7YA3fuMnVLRS/t1QgIlOToGXzTNCBSN6z9cFJ/VNEL/y9N2vkI7oNv6p0XLUuQQ==", "commit"=>"Usuń", "id"=>"Kowalski"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:37
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/students_controller.rb:38:in `destroy'
+Started GET "/students?nazwisko=Nowak" for 127.0.0.1 at 2019-05-29 10:06:26 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 315ms (Views: 277.6ms | ActiveRecord: 1.9ms)
+
+
+Started DELETE "/students/student" for 127.0.0.1 at 2019-05-29 10:06:29 +0200
+Processing by StudentsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CfBgcaZAxo+8LnrAPG9f/pj3RqFJjjayBZOV4A95Ukiq6T1VbRztnXMCZS0LK8izPHCbm/3S3N0lOIAjB+xeWg==", "commit"=>"Usuń", "id"=>"student"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "student"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:37
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:38
+  [1m[36mStudent Destroy (1.9ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/students_controller.rb:38
+  [1m[35m (186.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:38
+Redirected to http://localhost:3000/students
+Completed 302 Found in 195ms (ActiveRecord: 188.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-05-29 10:06:29 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for 127.0.0.1 at 2019-05-29 10:06:32 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 79ms (Views: 71.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:33:35 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (D:/Docs/studia/semestr 4/ruby/lab6/przygotowawcze/aplikacja2_2/app/models/student.rb:2: syntax error, unexpected ':', expecting end
+    validates :name :surname, presence :true, form...
+                    ^
+D:/Docs/studia/semestr 4/ruby/lab6/przygotowawcze/aplikacja2_2/app/models/student.rb:2: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+...ates :name :surname, presence :true, format: { with: /\A[a-z...
+...                              ^
+D:/Docs/studia/semestr 4/ruby/lab6/przygotowawcze/aplikacja2_2/app/models/student.rb:4: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+...alidates :surname, uniqueness :true
+...                              ^):
+  
+app/models/student.rb:2: syntax error, unexpected ':', expecting end
+app/models/student.rb:2: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/models/student.rb:4: syntax error, unexpected tSYMBEG, expecting do or '{' or '('
+app/controllers/students_controller.rb:7:in `index'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:34:09 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (D:/Docs/studia/semestr 4/ruby/lab6/przygotowawcze/aplikacja2_2/app/models/student.rb:2: syntax error, unexpected ':', expecting end
+    validates :name :surname, presence: true, form...
+                    ^
+D:/Docs/studia/semestr 4/ruby/lab6/przygotowawcze/aplikacja2_2/app/models/student.rb:2: Can't assign to true
+... :name :surname, presence: true, format: { with: /\A[a-zA-Z]...
+...                           ^~~~):
+  
+app/models/student.rb:2: syntax error, unexpected ':', expecting end
+app/models/student.rb:2: Can't assign to true
+app/controllers/students_controller.rb:7:in `index'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:35:10 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 274ms (Views: 241.6ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/students/Kowalski" for ::1 at 2019-05-29 10:35:19 +0200
+Processing by StudentsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXc683sRbmCEDOh1+KkCdPujmne807M4ruuMS1pzLXQebmfXsE1Fcksg95jP7ZU5XyRHTQiPWVeOQJmIUuYhZg==", "commit"=>"Usuń", "id"=>"Kowalski"}
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:37
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:38
+  [1m[36mStudent Destroy (1.1ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/students_controller.rb:38
+  [1m[35m (88.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:38
+Redirected to http://localhost:3000/students
+Completed 302 Found in 94ms (ActiveRecord: 90.2ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:35:19 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 74ms (Views: 67.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:35:25 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 58ms (Views: 53.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/new" for ::1 at 2019-05-29 10:35:27 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 80ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2019-05-29 10:35:34 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SPl3G2dhkDAJFKq0MPq00ZBNREbDoOupaeyJVRwynAv7peLN3XQfmmR2roz12uD2JjRoXHqss4ustMlsUrYIbQ==", "imie"=>"Jan2", "nazwisko"=>"Kowalski", "rok"=>"2", "edit"=>"1", "commit"=>"Save "}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:31
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:31
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:31
+Redirected to http://localhost:3000/students
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:35:34 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:35:53 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 67ms (Views: 61.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/new" for ::1 at 2019-05-29 10:35:55 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2019-05-29 10:36:04 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0I6Smaz3WuOPbKFJ7qPJYwzK+exeGebn2hITI9CQ+ORj0gdPFuLVSeIOpXErg51EurPV9ucVvsUfSlManhRsgg==", "imie"=>"Jan", "nazwisko"=>"Kowalski", "rok"=>"2", "edit"=>"1", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:31
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:31
+  [1m[36mStudent Create (1.0ms)[0m  [1m[32mINSERT INTO "students" ("name", "surname", "rok", "can_edit", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Jan"], ["surname", "Kowalski"], ["rok", 2], ["can_edit", 1], ["created_at", "2019-05-29 08:36:04.110897"], ["updated_at", "2019-05-29 08:36:04.110897"]]
+  ↳ app/controllers/students_controller.rb:31
+  [1m[35m (194.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:31
+Redirected to http://localhost:3000/students
+Completed 302 Found in 200ms (ActiveRecord: 196.2ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:36:04 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:36:07 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 82ms (Views: 78.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/Nowak/edit" for ::1 at 2019-05-29 10:36:09 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Nowak"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 53ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/Nowak" for ::1 at 2019-05-29 10:36:15 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MXgPnP//xkLg4yqxKC/B5/yzXKk4yuaYcEqc9Cut7d0Tq1fKR9Y7GjBekfgyZJ3PLlh+GOonrhlATZDud87BcA==", "imie"=>"Jan", "rok"=>"0", "edit"=>"0", "commit"=>"Save ", "id"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Nowak"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+Redirected to http://localhost:3000/students
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:36:15 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:36:19 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:5
+  Rendered students/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:39:44 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for #<ActiveModel::Errors:0x000000000ba959b0>):
+    1: <h1>Studenci</h1>
+    2: 
+    3: <% if @err.errors.any? %>
+    4:   <div id="error_explanation">
+    5:     <h2><%= pluralize(@err.errors.count, "error") %> prohibited this user from being saved:</h2>
+    6:  
+  
+app/views/students/index.html.erb:3:in `_app_views_students_index_html_erb__827105879_97821420'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:40:14 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 272ms (Views: 241.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:40:34 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (1.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 377ms (Views: 342.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/students/Kowalski/edit" for ::1 at 2019-05-29 10:40:38 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Kowalski"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 103ms (Views: 97.1ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/Kowalski" for ::1 at 2019-05-29 10:40:45 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vnjLv3NUR4QaQeFlOsYKSdSaEM6msxwM695pVVlmOyF268BSkU/Rg1K+X6U/hTubAgU20u7JvI/u3h2Sxon3RA==", "imie"=>"Janek2", "rok"=>"6", "edit"=>"0", "commit"=>"Save ", "id"=>"Kowalski"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:21
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:22
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Kowalski"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:22
+Redirected to http://localhost:3000/students
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:40:45 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Studenci</h1>
+    2: 
+    3: <% if @err.errors.any? %>
+    4:   <div id="error_explanation">
+    5:     <h2><%= pluralize(@err.errors.count, "error") %> prohibited this user from being saved:</h2>
+    6:  
+  
+app/views/students/index.html.erb:3:in `_app_views_students_index_html_erb__398686815_109679520'
+Started GET "/students" for ::1 at 2019-05-29 10:42:18 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Studenci</h1>
+    2: 
+    3: <% if @mystudent.errors.any? %>
+    4:   <div id="error_explanation">
+    5:     <h2><%= pluralize(@mystudent.errors.count, "error") %> prohibited this user from being saved:</h2>
+    6:  
+  
+app/views/students/index.html.erb:3:in `_app_views_students_index_html_erb__249623772_72457440'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:43:22 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 321ms (Views: 279.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/students/Kowalski/edit" for ::1 at 2019-05-29 10:43:25 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Kowalski"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/Kowalski" for ::1 at 2019-05-29 10:43:30 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CB/o8S6hj09RuLn3mOyXqCQ8L3wqEP4vOdl5ddeWrMTAjOMczLoZSBlHBzedr6Z68qMJYGJqXqw82Q2ySHlgoQ==", "imie"=>"jen2", "rok"=>"6", "edit"=>"0", "commit"=>"Save ", "id"=>"Kowalski"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Kowalski"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:21
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:21
+Redirected to http://localhost:3000/students
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:43:30 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Studenci</h1>
+    2: 
+    3: <% if @mystudent.errors.any? %>
+    4:   <div id="error_explanation">
+    5:     <h2><%= pluralize(@mystudent.errors.count, "error") %> prohibited this user from being saved:</h2>
+    6:  
+  
+app/views/students/index.html.erb:3:in `_app_views_students_index_html_erb__249623772_109912020'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:45:23 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 273ms (Views: 243.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:46:09 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 299ms (Views: 269.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/students/Kowalski/edit" for ::1 at 2019-05-29 10:46:12 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Kowalski"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 106ms (Views: 101.8ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/Kowalski" for ::1 at 2019-05-29 10:46:17 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UWPequWKIg+Q/QKqRGX4o3qZlbX0voxtiJVvP/Nq7ZCZ8NVHB5G0CNgCvGpBJslxrAazqbzELO6NlRv4bIUh9Q==", "imie"=>"new2", "rok"=>"6", "edit"=>"0", "commit"=>"Save ", "id"=>"Kowalski"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:20
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Kowalski"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:20
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Kowalski"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:21
+Redirected to http://localhost:3000/students
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:46:17 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `errors' for nil:NilClass):
+    1: <h1>Studenci</h1>
+    2: 
+    3: <% if @mystudent.errors.any? %>
+    4:   <div id="error_explanation">
+    5:     <h2><%= pluralize(@mystudent.errors.count, "error") %> prohibited this user from being saved:</h2>
+    6:  
+  
+app/views/students/index.html.erb:3:in `_app_views_students_index_html_erb__332752758_109643660'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:46:36 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 319ms (Views: 295.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/students/Kowalski/edit" for ::1 at 2019-05-29 10:46:38 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Kowalski"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 113ms (Views: 109.6ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/Kowalski" for ::1 at 2019-05-29 10:46:43 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JCEtAe7b/6hvNySTEPSbNAfuiy3I5l54c+/01mHI8bbssibsDMBpryfImlMVt6rm0XGtMYCc/vt274AR/ic90w==", "imie"=>"we2", "rok"=>"0", "edit"=>"0", "commit"=>"Save ", "id"=>"Kowalski"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:20
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Kowalski"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:20
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Kowalski"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:21
+Redirected to http://localhost:3000/students?nazwisko=Nowak
+Completed 302 Found in 9ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:46:43 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 53ms (Views: 49.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:47:49 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:47:52 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:48:01 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 62ms (Views: 57.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/Kowalski/edit" for ::1 at 2019-05-29 10:48:03 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Kowalski"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/Kowalski" for ::1 at 2019-05-29 10:48:09 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MEoRAf70xWaSNjJG34iG70cbIS4z0fZ8y7VpgaqU/bz42RrsHO9TYdrJjIbay7c9kYQHMnurVv/OtR1GNXsx2Q==", "imie"=>"wqe2", "rok"=>"0", "edit"=>"0", "commit"=>"Save ", "id"=>"Kowalski"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:20
+  [1m[36mStudent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Kowalski"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:20
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Kowalski"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:21
+Redirected to http://localhost:3000/students?nazwisko=Nowak
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:48:09 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:7
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/Nowak/edit" for ::1 at 2019-05-29 10:48:22 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Nowak"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 323ms (Views: 315.2ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/Nowak" for ::1 at 2019-05-29 10:48:29 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SHKTir8/42cS3dN36Ybl+5v4Kj6GWAa5orHdxq5T3uRqocvcBxYeP8JgaD7zzbnTSRMIj1S1TjiSttHc8jDySQ==", "imie"=>"wqe2", "rok"=>"0", "edit"=>"0", "commit"=>"Save ", "id"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:20
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Nowak"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:20
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Nowak"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:21
+Redirected to http://localhost:3000/students
+Completed 302 Found in 64ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:48:29 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:49:52 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized class variable @@mystudent in StudentsController):
+  
+app/controllers/students_controller.rb:3:in `index'
+Started GET "/students" for ::1 at 2019-05-29 10:50:16 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 328ms (Views: 319.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:50:18 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:9
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 65ms (Views: 51.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students/new" for ::1 at 2019-05-29 10:50:22 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 94ms (Views: 85.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2019-05-29 10:50:28 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dDJxe9taIPfLfTutHB420hNE4YELrLpjaT/56ZFJ1W3HbuStYU+vXaYfP5XZPmL1pT3Nm7Kg4kGsZ7nQ381BCw==", "imie"=>"jw2", "nazwisko"=>"aw2", "rok"=>"6", "edit"=>"0", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:34
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "aw2"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:34
+Redirected to http://localhost:3000/students
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:50:28 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:51:07 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `valid?' for nil:NilClass):
+  
+app/controllers/students_controller.rb:5:in `index'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:51:34 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:13
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 1.6ms)
+
+
+  
+NoMethodError (undefined method `can_edit' for nil:NilClass):
+  
+app/controllers/students_controller.rb:14:in `index'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:51:52 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:13
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 328ms (Views: 290.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/students/new" for ::1 at 2019-05-29 10:51:55 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 132ms (Views: 126.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2019-05-29 10:52:01 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qq00JxvoUR0tBONyTbHQa4T0jNFsy2QXYqYWG9Y4SokZ8aHxof3et0Bm50qIkYRMMo2gy9XHPDWn/lYimLze7w==", "imie"=>"qw21", "nazwisko"=>"aj2", "rok"=>"6", "edit"=>"0", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:36
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "aj2"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:36
+Redirected to http://localhost:3000/students
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:52:01 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:54:24 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 265ms (Views: 257.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:54:41 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:13
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 104ms (Views: 89.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/new" for ::1 at 2019-05-29 10:54:45 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 76ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2019-05-29 10:54:50 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NufT/a1FSrQ7stx0ZSimuIDoCfXMjK7rcnyyKG4OpdWFu0YrF1DFHlbQ2EygCPKfNpEl73WA9sm3JPIRIIoxsw==", "imie"=>"qwe2", "nazwisko"=>"qwe2", "rok"=>"0", "edit"=>"0", "commit"=>"Save "}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:36
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "qwe2"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:36
+Redirected to http://localhost:3000/students
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:54:50 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 37ms (Views: 35.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/students?nazwisko=Nowak" for 127.0.0.1 at 2019-05-29 10:55:19 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:13
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 255ms (Views: 232.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2019-05-29 10:55:22 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (38.7ms)
+Completed 200 OK in 85ms (Views: 82.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2019-05-29 10:55:25 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5zQB8WHprAqYzKlPEO4UFsXxsDT32+wBT1vsEtjnRI1UaJQn2/wjoPWurXfVzkAxc4icLk7XtCOKA6wrlmPQ6w==", "imie"=>"wqe2", "nazwisko"=>"qwe2", "rok"=>"0", "edit"=>"0", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:36
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "qwe2"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:36
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:36
+Redirected to http://localhost:3000/students
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2019-05-29 10:55:25 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:56:11 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:56:48 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `error' for nil:NilClass):
+  
+app/controllers/students_controller.rb:9:in `index'
+Started GET "/students" for ::1 at 2019-05-29 10:56:59 +0200
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `error' for nil:NilClass):
+  
+app/controllers/students_controller.rb:9:in `index'
+Started GET "/students" for ::1 at 2019-05-29 10:57:13 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 271ms (Views: 262.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:57:16 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:14
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 124ms (Views: 104.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/new" for ::1 at 2019-05-29 10:57:18 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 114ms (Views: 108.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for ::1 at 2019-05-29 10:57:26 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FKxWY+30Rr/xZw7zFgE6i4T7at5XmzOdFsg0v5zmYPyn8MO1V+HJFZwFCsvTIW6sMoJGxO6Xa7/TkHSG0mL0mg==", "imie"=>"wqw2", "nazwisko"=>"ewq3", "rok"=>"12", "edit"=>"3", "commit"=>"Save "}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:37
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "ewq3"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:37
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:37
+Redirected to http://localhost:3000/students
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:57:26 +0200
+Processing by StudentsController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `error' for #<Student:0x000000000cf0d460>
+Did you mean?  errors):
+  
+app/controllers/students_controller.rb:8:in `index'
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:57:46 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:14
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 335ms (Views: 300.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/students/Kowalski/edit" for ::1 at 2019-05-29 10:57:50 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Kowalski"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 111ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/Kowalski" for ::1 at 2019-05-29 10:57:55 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"taiko3z31BLYH7hvGPKWUKl4VcRYT5yctpl7IaSKOEV9O69OnuxCFZDgBq8dsaeCf+dz2BA1PB+zmQ/mO2X0IA==", "imie"=>"jan2", "rok"=>"12", "edit"=>"0", "commit"=>"Save ", "id"=>"Kowalski"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:26
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:27
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Kowalski"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:27
+Redirected to http://localhost:3000/students
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:57:55 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:59:02 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:14
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/Kowalski/edit" for ::1 at 2019-05-29 10:59:04 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Kowalski"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 64ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/students/Kowalski/edit" for ::1 at 2019-05-29 10:59:13 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Kowalski"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 272ms (Views: 264.0ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/Kowalski" for ::1 at 2019-05-29 10:59:18 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DjgvkuFj14aGptMdJ9O2DTJ9VW+p3vA8K2r3cfkKyBmtIXK2Kj/8lEmKzPAQlyFAlvqIVR2CGlMLweKy8Z/ECw==", "imie"=>"jan2", "rok"=>"12", "edit"=>"0", "commit"=>"Save ", "id"=>"Kowalski"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/students_controller.rb:20:in `update'
+Started PUT "/students/Kowalski" for ::1 at 2019-05-29 10:59:46 +0200
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ D:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DjgvkuFj14aGptMdJ9O2DTJ9VW+p3vA8K2r3cfkKyBmtIXK2Kj/8lEmKzPAQlyFAlvqIVR2CGlMLweKy8Z/ECw==", "imie"=>"jan2", "rok"=>"12", "edit"=>"0", "commit"=>"Save ", "id"=>"Kowalski"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:29
+  [1m[36mStudent Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Kowalski"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:29
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/students_controller.rb:29
+Redirected to http://localhost:3000/students
+Completed 302 Found in 50ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 10:59:47 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 317ms (Views: 312.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students?nazwisko=Nowak" for ::1 at 2019-05-29 10:59:51 +0200
+Processing by StudentsController#index as HTML
+  Parameters: {"nazwisko"=>"Nowak"}
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Nowak"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:13
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 76ms (Views: 67.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/students/Kowalski/edit" for ::1 at 2019-05-29 11:00:30 +0200
+Processing by StudentsController#edit as HTML
+  Parameters: {"id"=>"Kowalski"}
+  Rendering students/edit.html.erb within layouts/application
+  Rendered students/edit.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 50ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/students/Kowalski" for ::1 at 2019-05-29 11:00:35 +0200
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kG9aH0v3etPIIWNpuLb1LnVqxQM/zvkn3uyu1k161wFY/FHyqezs1IDe3am99cT8o/XjH3e0WaTb7NoR0pUbZA==", "imie"=>"jan", "rok"=>"2", "edit"=>"0", "commit"=>"Save ", "id"=>"Kowalski"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."surname" = ? LIMIT ?[0m  [["surname", "Kowalski"], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:28
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/students_controller.rb:29
+  [1m[36mStudent Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "students" WHERE "students"."surname" = ? AND "students"."id" != ? LIMIT ?[0m  [["surname", "Kowalski"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:29
+  [1m[36mStudent Update (1.6ms)[0m  [1m[33mUPDATE "students" SET "name" = ?, "can_edit" = ?, "updated_at" = ? WHERE "students"."id" = ?[0m  [["name", "jan"], ["can_edit", 0], ["updated_at", "2019-05-29 09:00:35.918160"], ["id", 4]]
+  ↳ app/controllers/students_controller.rb:29
+  [1m[35m (99.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/students_controller.rb:29
+Redirected to http://localhost:3000/students
+Completed 302 Found in 106ms (ActiveRecord: 101.4ms)
+
+
+Started GET "/students" for ::1 at 2019-05-29 11:00:36 +0200
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:18
+  Rendered students/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+

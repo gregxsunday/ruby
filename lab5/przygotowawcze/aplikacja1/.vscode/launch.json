@@ -1,0 +1,25 @@
+{
+    "version":"0.2.0",
+    "configurations":[
+       
+       {
+          "name":"Rails server",
+          "type":"Ruby",
+          "request":"launch",
+          "cwd":"${workspaceFolder}",
+          "program":"${workspaceFolder}/bin/rails",
+          "args":[
+             "server"
+          ]
+       },
+       {
+          "name":"Debug Attach",
+          "type":"Ruby",
+          "request":"attach",
+          "cwd":"${workspaceFolder}",
+          "remoteWorkspaceRoot":"${workspaceFolder}",
+          "remoteHost":"127.0.0.1",
+          "remotePort":"1234"
+       }
+    ]
+ }

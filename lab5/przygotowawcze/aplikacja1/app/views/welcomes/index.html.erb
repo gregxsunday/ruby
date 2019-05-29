@@ -1,0 +1,19 @@
+<h1>Welcomes#index</h1>
+<p>Find me in app/views/welcomes/index.html.erb</p>
+<p id="komunikat">komunikat: <%= @komunikat %></p>
+<p id="komunikaty">
+<% (1..@ilosc).each do |i| %>
+  <%= @komunikat %>
+<% end %>
+</p>
+<p id="tablica">tablica:<br>
+<% for i in 0..(@tablica.length - 1) %>
+  tablica[<%= i %>] = <%= @tablica[i]%><br>
+<% end %>
+</p>
+<p id="hashe">Hash:<br>
+  <% @hash.each do |key, value| %>
+    @hash[<%= key %>] = <%= value %><br>
+  <% end %>
+
+</p>

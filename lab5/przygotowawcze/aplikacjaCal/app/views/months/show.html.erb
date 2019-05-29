@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <td>P</td>
+    <td>W</td>
+    <td>Ś</td>
+    <td>C</td>
+    <td>P</td>
+    <td>S</td>
+    <td>N</td>
+  </tr>
+  <% (0..5).each do |i| %>
+    <tr>
+      <% (0..6).each do |j| %>
+        <td>
+          <%= @arr[i*7 + j]  %>
+        </td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>

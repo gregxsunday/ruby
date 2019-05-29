@@ -1,0 +1,1 @@
+ruby -ne load "zad1.rb"; BEGIN {spaces = " " * "Długość napisu\t".length };   res = how_often($_, word_lenghts($_));puts "Długość napisu\tKrotność wystąpienia";res.each do |len, freq|;puts "#{len}#{spaces}#{freq}";end

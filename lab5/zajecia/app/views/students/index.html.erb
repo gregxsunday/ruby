@@ -1,0 +1,15 @@
+<h1>Studenci</h1>
+<% if @can_edit %>
+    <%= link_to('Dodaj', new_student_path) %>
+  <% end %>
+<p id="hashe">
+<% @students.each do |student| %>
+  <% student.each do |key, value| %>
+    <%= key %> = <%= value %>,
+  <% end %> 
+  <% if @can_edit %>
+    <%= link_to('Edycja', edit_student_path(student['nazwisko'])) %>
+  <% end %>
+   <br>
+<% end %>
+</p>

@@ -1,0 +1,8 @@
+<!-- Opis 'form_with()' - patrz: https://m.patrikonrails.com/rails-5-1s-form-with-vs-old-form-helpers-3a5f72a8c78a -->
+<h1>Edycja roku</h1>
+<%= form_with(url: month_path(:year), method: :put, local: true) do |form| %>
+  <!-- Tutaj umieść kod Ruby generujący pole tekstowe z podaną wartością początkową -->
+  <%= form.text_field :year, :value => '2019' %>
+  <!-- Tutaj umieść kod Ruby generujący przycisk akceptacji formularza -->
+  <%= form.submit %>
+<% end %>
