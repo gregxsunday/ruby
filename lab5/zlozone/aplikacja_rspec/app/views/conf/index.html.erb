@@ -1,0 +1,19 @@
+<h1>Configuration editor</h1>
+
+<%= link_to('Dodaj', new_conf_path()) %>
+
+<% @config.each do |conf| %>
+    <%= form_with url: conf_path(conf['name']), method: :put, local: true do |form| %>
+        <%= conf['name'] %>: 
+        <% if conf['predefined'] == true %>
+            <%= select_tag(conf['name'], options_for_select(conf['values'].each, conf['value'])) %>
+        <% else %>
+            <%= form.text_field conf['name'], :value => conf['value'] %>
+        <% end %>
+        <%= form.submit "Edit" %>
+    <% end %>
+
+    <%= form_with url: conf_path(conf['name']), method: :delete, local: true do |form| %> 
+        <%= form.submit "Delete" %>
+    <% end %>
+<% end %>

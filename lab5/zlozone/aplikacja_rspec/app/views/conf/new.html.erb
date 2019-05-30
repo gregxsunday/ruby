@@ -1,0 +1,6 @@
+<h1>Dodawanie konfiguracji</h1>
+<%= form_with(url: conf_index_path(), method: :post, local: true) do |form| %>
+  nazwa: <%= form.text_field :name %>
+  wartość: <%= form.text_field :value %>
+  <%= form.submit %>
+<% end %>
