@@ -1,0 +1,31 @@
+<h1>Studenci</h1>
+
+<% if @mystudent and @mystudent.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@mystudent.errors.count, "error") %> prohibited this user from being saved:</h2>
+ 
+    <ul>
+    <% @mystudent.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<% if @can_edit %>
+    <%= link_to('Dodaj', new_student_path) %>
+  <% end %><br>
+<% Student.all.each do |st| %>
+    Imie: <%= st.name %>, Nazwisko: <%= st.surname %>, Rok: <%= st.rok %>, Edycja: <%= st.can_edit %>
+    <% if @can_edit %>
+        <%= link_to('Edycja', edit_student_path(st.surname)) %>
+        <%= form_with(url: student_path(st.surname), method: :delete, local: true) do |form| %>
+        <%= form.submit "Usuń" %>
+        <% end %>
+    <% end %>
+    <br>
+<% end %>
+</p>
+<div class="alert alert-danger" role="alert">
+Obok jest ikona kamery <%= fa_icon('camera-retro') %>
+</div>

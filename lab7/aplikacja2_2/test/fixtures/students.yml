@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  surname: MyString
+  rok: 1
+  can_edit: false
+
+two:
+  name: MyString
+  surname: MyString
+  rok: 1
+  can_edit: false
