@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message: 'Witaj Świecie 2'
+  id: 1
+
+two:
+  message: 'Witaj Świecie 3'
+  id: 2
+
+three:
+  message: 'Witaj Świecie 1'
+  id: 3
