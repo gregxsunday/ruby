@@ -1,9 +1,9 @@
-<h1>Studenci</h1>
+<h1><%= fa_icon('user-graduate') %> Studenci</h1>
 
 <% if @mystudent and @mystudent.errors.any? %>
   <div id="error_explanation">
     <h2><%= pluralize(@mystudent.errors.count, "error") %> prohibited this user from being saved:</h2>
- 
+
     <ul>
     <% @mystudent.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
@@ -25,7 +25,6 @@
     <% end %>
     <br>
 <% end %>
-</p>
 <div class="alert alert-danger" role="alert">
 Obok jest ikona kamery <%= fa_icon('camera-retro') %>
 </div>
