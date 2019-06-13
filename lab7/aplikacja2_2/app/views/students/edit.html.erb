@@ -1,10 +1,1 @@
-<!-- Opis 'form_with()' - patrz: https://m.patrikonrails.com/rails-5-1s-form-with-vs-old-form-helpers-3a5f72a8c78a -->
-<h1>Edycja studenta</h1>
-<%= form_with(url: student_path(), method: :put, local: true) do |form| %>
-  <!-- Tutaj umieść kod Ruby generujący pole tekstowe z podaną wartością początkową -->
-  Imie: <%= form.text_field :imie %><br>
-  Rok studiów: <%= form.text_field :rok %><br>
-  Uprawnienia do edycji: <%= form.text_field :edit %><br>
-  <!-- Tutaj umieść kod Ruby generujący przycisk akceptacji formularza -->
-<%= form.submit %>
-<% end %>
+<%= render 'form', title: 'Edycja studenta', with_surname: false %>

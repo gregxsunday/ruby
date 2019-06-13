@@ -1,0 +1,12 @@
+<h1><%= title %></h1>
+<%= form_with(url: students_path(), method: :post, local: true) do |form| %>
+  <!-- Tutaj umieść kod Ruby generujący pole tekstowe z podaną wartością początkową -->
+  Imie: <%= form.text_field :imie %><br>
+  <% if with_surname %>
+    Nazwisko: <%= form.text_field :nazwisko %><br>
+  <% end %>
+  Rok studiów: <%= form.text_field :rok %><br>
+  Uprawnienia do edycji: <%= form.text_field :edit %><br>
+  <!-- Tutaj umieść kod Ruby generujący przycisk akceptacji formularza -->
+<%= form.submit %>
+<% end %>
